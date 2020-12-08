@@ -1,0 +1,56 @@
+PROBLEM 1
+part 1
+
+4/10 or 2/5 read
+6/10 or 3/5 not read
+-H(y) = 2/5 * log2(2/5) + 3/5 * log2(3/5)
+      = 2/5 * -1.32192809489 + 3/5*-0.736965594166
+      = -0.52877123795 + -0.4421793565
+      = -0.97095059445
+ H(y) = 0.97095059445
+
+part 2
+x1 - know author
+4/10 0s
+6/10 1s
+Gain(S, author) = Entropy(S) -(4/10 Entropy(0) + 6/10 Entropy(1))
+    Entropy(0) = -(3/4 * log2(3/4) + 1/4 * log2(1/4)) = .811278
+    Entropy(1) = -(3/6 * log2(3/6) + 3/6 * log2(3/6)) = 1
+Gain(S, author) = .97095 - (4/10*.811278 + 6/10*1)
+               = .0464388
+
+x2 - is long
+5/10 0s
+5/10 1s
+Gain(S, length) = Entropy(S) -(5/10 Entropy(0) + 6/10 Entropy(1))
+    Entropy(0) = -(4/5* log2(4/5) + 1/5* log2(1/5)) = .721928
+    Entropy(1) = -(5/5* log2(5/5) + 0/5* log2(0/5)) = 0
+Gain(S, length) = .97095 - (5/10*.721928 + 5/10*0)
+               = .609986
+
+x3 - has research
+3/10 0s
+7/10 1s
+Gain(S, research) = Entropy(S) -(3/10 Entropy(0) + 7/10 Entropy(1))
+    Entropy(0) = -(2/3* log2(2/3) + 1/3* log2(1/3)) = .9182958
+    Entropy(1) = -(4/7* log2(4/7) + 3/7* log2(3/7)) = .985228
+Gain(S, research) = .97095 -(3/10*.9182958 + 7/10*.985228)
+                = .00580166
+    
+x4 - has grade
+3/10 0s
+7/10 1s
+Gain(S, grade) = Entropy(S) -(3/10 Entropy(0) + 7/10 Entropy(1))
+    Entropy(0) = -(2/3* log2(2/3) + 1/3* log2(1/3)) = .9182958
+    Entropy(1) = -(5/7* log2(5/7) + 2/7* log2(2/7)) = .86312056
+Gain(S, grade) = .97095 -(3/10*.9182958 + 7/10*.86312056)
+               = .091276868
+               
+x5 - has lottery
+7/10 0s
+3/10 1s
+Gain(S, lottery) = Entropy(S) -(7/10 Entropy(0) + 3/10 Entropy(1))
+    Entropy(0) = -(4/7* log2(4/7) + 3/7* log2(3/7)) = .985228
+    Entropy(1) = -(2/3* log2(2/3) + 1/3* log2(1/3)) = .9182958
+Gain(S, lottery) = .97095 - (7/10*.985228 + 3/10*.9182958)
+                = .00580166
