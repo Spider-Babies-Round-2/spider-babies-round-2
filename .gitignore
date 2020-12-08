@@ -2,3 +2,5 @@ data
 *.pyc
 __pycache__
 .ipynb_checkpoints
+*train.txt
+*test.txt
