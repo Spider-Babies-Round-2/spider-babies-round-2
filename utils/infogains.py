@@ -1,3 +1,5 @@
+import numpy as np
+
 class InfoGains():
     def __init__(self, data: np.array):
         self.features = data[:,:-1]
