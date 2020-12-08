@@ -1,13 +1,13 @@
 import numpy as np
 
 class InfoGains():
-    def __init__(self, data: np.array, class_types: tuple = (0,1):
+    def __init__(self, features: np.array, classes: np.array, class_types: tuple = (0,1)):
         '''
         Takes in data of features + classes
         also takes a tuple of class_types (must be binary)
         '''
-        self.features = data[:,:-1]
-        self.classes = data[:,-1]
+        self.features = features
+        self.classes = classes
                  
         assert len(class_types) == 2
         self.class_types = class_types
